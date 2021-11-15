@@ -31,7 +31,7 @@ label_list = noyaki.convert(
     )
 
 print(label_list)
-# ['O', 'O', 'U-PERSON', 'O', 'O', 'O']
+# ['O', 'O', 'B-PERSON', 'L-PERSON', 'O', 'O', 'O']
 ```
 
 ## Note
