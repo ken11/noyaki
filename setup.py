@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="noyaki",
-    version="0.0.1",
+    version="0.1.0",
     author="ken",
     author_email="kent.adachi@adachi-honten.net",
     description="character span label to tokenized base label for Japanese text",

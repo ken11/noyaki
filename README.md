@@ -19,6 +19,20 @@ label_list = noyaki.convert(
 print(label_list)
 # ['O', 'O', 'U-PERSON', 'O', 'O', 'O'] 
 ```
+  
+If you want to remove the subword symbol (eg. ##), specify the `subword` argument.  
+```py
+import noyaki
+
+label_list = noyaki.convert(
+        ['明日', 'は', '田', '##中', 'さん', 'に', '会う'],
+        [[3, 5, 'PERSON']],
+	subword="##"
+    )
+
+print(label_list)
+# ['O', 'O', 'U-PERSON', 'O', 'O', 'O']
+```
 
 ## Note
 Only Japanese is supported.  

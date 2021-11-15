@@ -1,3 +1,6 @@
+import re
+
+
 # @params
 # tokenized_text: list
 # labels: list of list
@@ -9,7 +12,7 @@
 # label_list: list
 # ex.
 # label_list = ['O', 'O', 'U-PERSON', 'O', 'O', 'O']
-def convert(tokenized_text, labels):
+def convert(tokenized_text, labels, subword=None):
     # init return list
     label_list = ['O'] * len(tokenized_text)
 
@@ -21,6 +24,8 @@ def convert(tokenized_text, labels):
         targets = []
 
         for idx, word in enumerate(tokenized_text):
+            if type(subword) is str:
+                word = re.sub(subword, "", word)
             if begin <= position < end:
                 targets.append(idx)
             position += len(word)
