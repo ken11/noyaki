@@ -5,14 +5,15 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="noyaki",
-    version="0.1.1",
+    version="0.2.0",
     author="ken",
     author_email="kent.adachi@adachi-honten.net",
     description="character span label to tokenized base label for Japanese text",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ken11/noyaki",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(where='src'),
+    package_dir={'': 'src'},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
